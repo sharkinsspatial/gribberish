@@ -41,7 +41,7 @@ jobs:
         with:
           working-directory: python
           target: ${{ matrix.platform.target }}
-          args: --release --out dist --find-interpreter
+          args: --release --out dist -i 3.9 -i 3.10 -i 3.11 -i 3.12 -i 3.13 --manifest-path python/${{ matrix.module }}/Cargo.toml
           sccache: 'true'
           manylinux: auto
       - name: Upload wheels
