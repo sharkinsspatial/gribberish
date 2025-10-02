@@ -4,7 +4,7 @@ build-backend = "maturin"
 
 [project]
 name = "gribberish"
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 classifiers = [
     "Programming Language :: Rust",
     "Programming Language :: Python :: Implementation :: CPython",
@@ -17,7 +17,7 @@ dependencies = ["numpy >= 2"]
 [project.optional-dependencies]
 xarray = ["xarray", "fsspec"]
 kerchunk = ["kerchunk", "zarr", "numcodecs", "fsspec"]
-zarr = ["zarr==3.0.0b2"]
+zarr = ["zarr>=3.0.0b2"]
 dev = [
     "matplotlib",
     "cf_xarray",
